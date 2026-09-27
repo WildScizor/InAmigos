@@ -1,0 +1,2475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>InAmigos Foundation</title>
+
+<link rel="icon" href="assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+/* =========================================================
+   BASE
+========================================================= */
+
+:root{
+  --ink:#211C33;
+  --muted:#6D6878;
+  --cream:#FBF5EA;
+  --cream-dark:#F1E8D8;
+  --paper:#FFFDF9;
+  --rose:#C42D5F;
+  --rose-dark:#962247;
+  --green:#176B55;
+  --yellow:#E5A33F;
+  --line:rgba(33,28,51,.15);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:78px;
+}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"Work Sans",sans-serif;
+  font-size:16px;
+  line-height:1.6;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.wrap{
+  width:min(1120px, calc(100% - 48px));
+  margin:auto;
+}
+
+h1,
+h2,
+h3,
+h4{
+  font-family:"Fraunces",serif;
+  font-weight:600;
+  letter-spacing:-.025em;
+}
+
+h1,
+h2,
+h3,
+p{
+  margin-top:0;
+}
+
+p{
+  margin-bottom:1em;
+}
+
+section{
+  padding:90px 0;
+}
+
+.eyebrow{
+  color:var(--rose-dark);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(251,245,234,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px);
+}
+
+.nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  font-family:"Fraunces",serif;
+  font-size:22px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.brand img{
+  width:40px;
+  height:40px;
+  object-fit:cover;
+  border-radius:7px;
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+  font-size:20px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--muted);
+}
+
+.nav-links a:hover{
+  color:var(--ink);
+}
+
+.nav-donate{
+  background:var(--rose);
+  color:white;
+  padding:10px 18px;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+  border-radius:4px;
+}
+
+.nav-donate:hover{
+  background:var(--rose-dark);
+}
+
+
+/* =========================================================
+   TRUST BAR
+========================================================= */
+
+.trust-bar{
+  background:var(--ink);
+  color:#eee7da;
+}
+
+.trust-inner{
+  min-height:38px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:800px 80px;
+  font-size:18px;
+}
+
+.trust-inner span{
+  opacity:.88;
+}
+
+.trust-divider{
+  opacity:.3!important;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  padding:0;
+  background:var(--ink);
+  color:white;
+}
+
+.hero-video{
+  width:100%;
+  height:min(68vh,680px);
+  display:block;
+  object-fit:cover;
+  background:#111;
+}
+
+.hero-copy{
+  padding:62px 0 72px;
+}
+
+.hero-copy-inner{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:70px;
+  align-items:end;
+}
+
+.hero-title{
+  font-size:clamp(48px,7vw,88px);
+  line-height:.92;
+  margin:0;
+  color:#fff;
+}
+
+.hero-right{
+  max-width:470px;
+}
+
+.hero-right p{
+  color:#e5dfd4;
+  font-size:17px;
+  margin-bottom:28px;
+}
+
+.hero-links{
+  display:flex;
+  gap:22px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.hero-link{
+  display:inline-block;
+  padding-bottom:4px;
+  border-bottom:1px solid rgba(255,255,255,.6);
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+}
+
+.hero-link.primary{
+  background:var(--rose);
+  border:0;
+  padding:12px 19px;
+  color:#fff;
+}
+
+.hero-link.primary:hover{
+  background:var(--rose-dark);
+}
+
+
+/* =========================================================
+   INTRO / NUMBERS
+========================================================= */
+
+.intro{
+  background:var(--cream);
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1.25fr;
+  gap:80px;
+  align-items:start;
+}
+
+.intro h2{
+  font-size:clamp(34px,4vw,52px);
+  line-height:1.02;
+  margin-bottom:20px;
+}
+
+.intro-copy{
+  color:#514c59;
+  max-width:650px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+
+.stat{
+  padding:25px 24px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.stat-number{
+  display:block;
+  font-family:"Fraunces",serif;
+  font-size:38px;
+  line-height:1;
+  margin-bottom:7px;
+}
+
+.stat-label{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--muted);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:end;
+  margin-bottom:58px;
+}
+
+.section-heading h2{
+  font-size:clamp(38px,5vw,60px);
+  line-height:.98;
+  margin:0;
+}
+
+.section-heading p{
+  max-width:470px;
+  color:var(--muted);
+  margin:0;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects{
+  background:var(--cream-dark);
+}
+
+.project-list{
+  border-top:1px solid var(--line);
+}
+
+
+/*
+  IMPORTANT:
+  Posters stay portrait and relatively small.
+  We don't force them into a giant 50/50 box.
+*/
+
+.project{
+  display:grid;
+  grid-template-columns:330px 1fr;
+  gap:72px;
+  align-items:center;
+  padding:58px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.project.reverse{
+  grid-template-columns:1fr 330px;
+}
+
+.project.reverse .project-image{
+  order:2;
+}
+
+.project.reverse .project-info{
+  order:1;
+}
+
+.project-image{
+  width:330px;
+  justify-self:center;
+}
+
+.project-image img{
+  width:100%;
+  height:auto;
+  max-height:440px;
+  object-fit:contain;
+  background:#fff;
+  border:1px solid rgba(33,28,51,.1);
+}
+
+
+/* Project text */
+
+.project-info{
+  max-width:600px;
+}
+
+.project-number{
+  font-family:"Fraunces",serif;
+  font-size:20px;
+  color:var(--rose-dark);
+  margin-bottom:10px;
+}
+
+.project-info h3{
+  font-size:clamp(30px,3.2vw,44px);
+  line-height:1.02;
+  margin-bottom:16px;
+}
+
+.project-info p{
+  color:#57515e;
+  max-width:570px;
+  font-size:16px;
+}
+
+.project-facts{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 20px;
+  margin:22px 0 24px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+}
+
+.project-fact{
+  font-size:13px;
+  color:#4d4853;
+}
+
+.project-fact strong{
+  color:var(--ink);
+}
+
+.project-link{
+  display:inline-block;
+  font-size:13px;
+  font-weight:700;
+  color:var(--rose-dark);
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+  padding-bottom:2px;
+}
+
+.project-link:hover{
+  opacity:.7;
+}
+
+
+/* =========================================================
+   IMPACT BAND
+========================================================= */
+
+.impact{
+  background:var(--ink);
+  color:white;
+  padding:70px 0;
+}
+
+.impact-grid{
+  display:grid;
+  grid-template-columns:1.2fr 2fr;
+  gap:70px;
+  align-items:center;
+}
+
+.impact h2{
+  color:#fff;
+  font-size:clamp(35px,4vw,50px);
+  line-height:1;
+  margin-bottom:15px;
+}
+
+.impact-intro{
+  color:#cfc8bd;
+  max-width:420px;
+}
+
+.impact-items{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(255,255,255,.18);
+  border-left:1px solid rgba(255,255,255,.18);
+}
+
+.impact-item{
+  padding:25px 20px;
+  border-right:1px solid rgba(255,255,255,.18);
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.impact-item strong{
+  display:block;
+  font-family:"Fraunces",serif;
+  font-size:28px;
+  margin-bottom:5px;
+}
+
+.impact-item span{
+  color:#cfc8bd;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+  background:var(--paper);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:90px;
+}
+
+.about-title{
+  font-size:clamp(38px,4vw,56px);
+  line-height:1;
+}
+
+.about-copy{
+  color:#514c59;
+  font-size:16px;
+}
+
+.credentials{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0;
+  margin-top:35px;
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+
+.credential{
+  padding:16px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  font-size:13px;
+}
+
+.credential strong{
+  display:block;
+  margin-bottom:3px;
+  color:var(--ink);
+}
+
+
+/* =========================================================
+   EVENTS / COMMUNITY
+========================================================= */
+
+.events{
+  background:var(--cream);
+}
+
+.event-list{
+  border-top:1px solid var(--line);
+}
+
+.event{
+  display:grid;
+  grid-template-columns:130px 1fr auto;
+  gap:35px;
+  align-items:center;
+  padding:25px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.event-date{
+  font-family:"Fraunces",serif;
+  font-size:19px;
+}
+
+.event-category{
+  color:var(--rose-dark);
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:4px;
+}
+
+.event h3{
+  margin:0 0 4px;
+  font-size:23px;
+}
+
+.event p{
+  color:var(--muted);
+  font-size:14px;
+  margin:0;
+}
+
+.event-arrow{
+  font-size:20px;
+  color:var(--rose-dark);
+}
+
+
+/* =========================================================
+   SPREAD
+========================================================= */
+
+.spread{
+  background:var(--cream-dark);
+}
+
+.spread-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:80px;
+  align-items:center;
+}
+
+.spread-image img{
+  width:100%;
+  max-width:390px;
+  margin:auto;
+}
+
+.spread-copy h2{
+  font-size:clamp(38px,4.5vw,58px);
+  line-height:.98;
+  margin-bottom:20px;
+}
+
+.spread-copy p{
+  max-width:560px;
+  color:#514c59;
+}
+
+.share-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.share-button{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 15px;
+  border:1px solid var(--ink);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:600;
+  background:transparent;
+}
+
+.share-button:hover{
+  background:var(--ink);
+  color:#fff;
+}
+
+.share-button svg{
+  width:17px;
+  height:17px;
+}
+
+
+/* =========================================================
+   DONATION
+========================================================= */
+
+.donate{
+  background:var(--rose);
+  color:white;
+}
+
+.donate-grid{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.qr{
+  width:240px;
+  height:240px;
+  padding:16px;
+  background:white;
+}
+
+.qr img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.donate-copy h2{
+  font-size:clamp(40px,5vw,62px);
+  line-height:.95;
+  margin-bottom:16px;
+}
+
+.donate-copy p{
+  max-width:600px;
+  color:#ffe8ef;
+}
+
+.upi{
+  display:inline-flex;
+  align-items:center;
+  gap:15px;
+  background:rgba(0,0,0,.15);
+  border:1px solid rgba(255,255,255,.25);
+  padding:11px 13px;
+  margin:10px 0 22px;
+  max-width:100%;
+}
+
+.upi code{
+  font-family:Consolas,monospace;
+  font-size:14px;
+  overflow:auto;
+}
+
+.copy-button{
+  border:0;
+  background:white;
+  color:var(--rose-dark);
+  padding:8px 14px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.donate-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.donate-button{
+  display:inline-block;
+  background:white;
+  color:var(--rose-dark);
+  padding:12px 19px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+.donate-button.alt{
+  background:transparent;
+  color:white;
+  border:1px solid rgba(255,255,255,.65);
+}
+
+.donate-note{
+  margin-top:18px;
+  font-size:12px;
+  color:#ffdce7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:#17131f;
+  color:#d9d3df;
+  padding:55px 0 30px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:60px;
+}
+
+.footer-title{
+  color:white;
+  font-family:"Fraunces",serif;
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+.footer-col p,
+.footer-col a{
+  color:#bdb6c5;
+  font-size:13px;
+}
+
+.footer-col a{
+  display:block;
+  text-decoration:none;
+  margin-bottom:7px;
+}
+
+.footer-col a:hover{
+  color:white;
+}
+
+.footer-bottom{
+  margin-top:45px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:#8e8797;
+  font-size:11px;
+  text-align:center;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,20px);
+  background:var(--ink);
+  color:white;
+  padding:11px 18px;
+  font-size:13px;
+  opacity:0;
+  pointer-events:none;
+  transition:.25s;
+  z-index:500;
+}
+
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:850px){
+
+  section{
+    padding:70px 0;
+  }
+
+  .hero-copy-inner{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .hero-title{
+    font-size:clamp(52px,12vw,76px);
+  }
+
+  .intro-grid,
+  .section-heading,
+  .impact-grid,
+  .about-grid,
+  .spread-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .project,
+  .project.reverse{
+    grid-template-columns:280px 1fr;
+    gap:40px;
+  }
+
+  .project.reverse .project-image{
+    order:2;
+  }
+
+  .project.reverse .project-info{
+    order:1;
+  }
+
+  .project-image{
+    width:280px;
+  }
+
+  .impact-items{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .donate-grid{
+    grid-template-columns:200px 1fr;
+    gap:40px;
+  }
+
+  .qr{
+    width:200px;
+    height:200px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .wrap{
+    width:min(100% - 32px,1120px);
+  }
+
+  .nav{
+    min-height:64px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-donate{
+    padding:9px 13px;
+    font-size:13px;
+  }
+
+  .brand{
+    font-size:17px;
+  }
+
+  .hero-video{
+    height:auto;
+    aspect-ratio:16/9;
+  }
+
+  .hero-copy{
+    padding:45px 0 50px;
+  }
+
+  .hero-title{
+    font-size:54px;
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat-number{
+    font-size:31px;
+  }
+
+  /*
+    Mobile posters become normal vertical articles.
+    The image is still intentionally NOT huge.
+  */
+
+  .project,
+  .project.reverse{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:30px;
+    padding:45px 0;
+  }
+
+  .project-image{
+    width:min(250px,75%);
+    margin:auto;
+  }
+
+  .project.reverse .project-image{
+    order:initial;
+  }
+
+  .project.reverse .project-info{
+    order:initial;
+  }
+
+  .project-info h3{
+    font-size:34px;
+  }
+
+  .impact-items{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .event{
+    grid-template-columns:90px 1fr auto;
+    gap:18px;
+  }
+
+  .event h3{
+    font-size:18px;
+  }
+
+  .event p{
+    display:none;
+  }
+
+  .donate-grid{
+    grid-template-columns:1fr;
+  }
+
+  .qr{
+    margin:auto;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+}
+
+@media(max-width:430px){
+
+  .hero-title{
+    font-size:47px;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .impact-items{
+    grid-template-columns:1fr;
+  }
+
+  .event{
+    grid-template-columns:1fr auto;
+  }
+
+  .event-date{
+    grid-column:1 / -1;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     HEADER
+======================================================== -->
+
+<header class="site-header">
+
+  <div class="wrap nav">
+
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="InAmigos Foundation">
+      InAmigos Foundation
+    </a>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#events">Events</a>
+      <a href="#spread">Get involved</a>
+    </nav>
+
+    <a href="#donate" class="nav-donate">
+      Donate
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- =======================================================
+     TRUST
+======================================================== -->
+
+<div class="trust-bar">
+
+  <div class="wrap trust-inner">
+
+    <span>Section 8 Non-Profit</span>
+    <span class="trust-divider">•</span>
+    <span>80G &amp; 12A</span>
+    <span class="trust-divider">•</span>
+    <span>CSR-1 Registered</span>
+    <span class="trust-divider">•</span>
+    <span>NITI Aayog Registered</span>
+
+  </div>
+
+</div>
+
+
+<main id="top">
+
+
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<section class="hero">
+
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    poster="assets/cover.jpg"
+    id="bgVideo"
+  >
+
+    <source
+      src="assets/bgv.mp4"
+      type="video/mp4"
+    >
+
+  </video>
+
+
+  <div class="wrap hero-copy">
+
+    <div class="hero-copy-inner">
+
+      <h1 class="hero-title">
+        Small acts.<br>
+        Real change.
+      </h1>
+
+
+      <div class="hero-right">
+
+        <p>
+          InAmigos Foundation works across education, food security,
+          animal welfare, women’s empowerment, environmental
+          sustainability and employability.
+        </p>
+
+        <div class="hero-links">
+
+          <a
+            href="#projects"
+            class="hero-link primary"
+          >
+            Explore our work
+          </a>
+
+          <a
+            href="#donate"
+            class="hero-link"
+          >
+            Support a cause
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     INTRO + NUMBERS
+======================================================== -->
+
+<section class="intro" id="about">
+
+  <div class="wrap intro-grid">
+
+
+    <div>
+
+      <div class="eyebrow">
+        About InAmigos
+      </div>
+
+      <h2>
+        Built around people,
+        not just programs.
+      </h2>
+
+    </div>
+
+
+    <div>
+
+      <p class="intro-copy">
+        Founded on September 23, 2020, InAmigos Foundation is a
+        Section 8 non-profit based in Chhattisgarh and working
+        across India.
+      </p>
+
+      <p class="intro-copy">
+        Its work brings together volunteers, professionals and
+        partners around practical community needs, from meals and
+        education to animal welfare, women's empowerment,
+        environmental conservation and employability.
+      </p>
+
+
+      <div class="stats">
+
+        <div class="stat">
+          <span class="stat-number">200</span>
+          <span class="stat-label">Volunteers</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-number">28</span>
+          <span class="stat-label">States</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-number">6</span>
+          <span class="stat-label">Core initiatives</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-number">50K+</span>
+          <span class="stat-label">Beneficiaries</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     PROJECTS
+======================================================== -->
+
+<section class="projects" id="projects">
+
+  <div class="wrap">
+
+
+    <div class="section-heading">
+
+      <div>
+
+        <div class="eyebrow">
+          Where your support goes
+        </div>
+
+        <h2>
+          Six projects.<br>
+          Different needs.
+        </h2>
+
+      </div>
+
+
+      <p>
+        From a meal today to skills for tomorrow, each initiative
+        focuses on a different part of community wellbeing.
+      </p>
+
+    </div>
+
+
+    <div class="project-list">
+
+
+      <!-- =================================================
+           SEVA
+      ================================================== -->
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="assets/poster-seva.jpg"
+            alt="Project SEVA donation poster"
+          >
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-number">
+            01 / SEVA
+          </div>
+
+          <h3>
+            Food, clothing and basic support.
+          </h3>
+
+          <p>
+            Project SEVA focuses on immediate needs, including
+            food and clothing distribution for underprivileged
+            communities. The foundation reports more than
+            50,000 meals and clothing distributions through its
+            work.
+          </p>
+
+          <div class="project-facts">
+
+            <div class="project-fact">
+              <strong>Focus</strong><br>
+              Food &amp; clothing
+            </div>
+
+            <div class="project-fact">
+              <strong>Purpose</strong><br>
+              Immediate relief
+            </div>
+
+          </div>
+
+          <a
+            href="#donate"
+            class="project-link"
+          >
+            Support Project SEVA →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           BACHPANSHALA
+      ================================================== -->
+
+      <article class="project reverse">
+
+        <div class="project-image">
+
+          <img
+            src="assets/poster-education.jpg"
+            alt="Project Bachpanshala education poster"
+          >
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-number">
+            02 / BACHPANSHALA
+          </div>
+
+          <h3>
+            Give children room to learn.
+          </h3>
+
+          <p>
+            Project Bachpanshala works to bridge educational
+            gaps for underprivileged children through school
+            education support, learning sessions, basic digital
+            literacy, life skills and educational resources.
+          </p>
+
+          <div class="project-facts">
+
+            <div class="project-fact">
+              <strong>Focus</strong><br>
+              Child education
+            </div>
+
+            <div class="project-fact">
+              <strong>Includes</strong><br>
+              Digital &amp; life skills
+            </div>
+
+          </div>
+
+          <a
+            href="#donate"
+            class="project-link"
+          >
+            Support education →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           JEEV
+      ================================================== -->
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="assets/poster-animal.jpg"
+            alt="Project Jeev animal welfare poster"
+          >
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-number">
+            03 / JEEV
+          </div>
+
+          <h3>
+            Care for the lives around us.
+          </h3>
+
+          <p>
+            Project Jeev supports stray and abandoned animals
+            through feeding, rescue, protection, medical care
+            and shelter. The foundation says its volunteer
+            network feeds more than 50 stray animals daily.
+          </p>
+
+          <div class="project-facts">
+
+            <div class="project-fact">
+              <strong>Focus</strong><br>
+              Animal welfare
+            </div>
+
+            <div class="project-fact">
+              <strong>Daily reach</strong><br>
+              50+ animals
+            </div>
+
+          </div>
+
+          <a
+            href="#donate"
+            class="project-link"
+          >
+            Support Project Jeev →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           UDAAN
+      ================================================== -->
+
+      <article class="project reverse">
+
+        <div class="project-image">
+
+          <img
+            src="assets/poster-udaan.jpg"
+            alt="Project Udaan women empowerment poster"
+          >
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-number">
+            04 / UDAAN
+          </div>
+
+          <h3>
+            Skills that can become independence.
+          </h3>
+
+          <p>
+            Project Udaan works with women and self-help groups,
+            supporting skill development, financial independence
+            and awareness around issues including menstrual
+            hygiene.
+          </p>
+
+          <div class="project-facts">
+
+            <div class="project-fact">
+              <strong>Focus</strong><br>
+              Women’s empowerment
+            </div>
+
+            <div class="project-fact">
+              <strong>Approach</strong><br>
+              Skills &amp; self-reliance
+            </div>
+
+          </div>
+
+          <a
+            href="#donate"
+            class="project-link"
+          >
+            Support Project Udaan →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           PRAKRITI
+      ================================================== -->
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="assets/poster-overview.jpg"
+            alt="Project Prakriti environmental initiative"
+          >
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-number">
+            05 / PRAKRITI
+          </div>
+
+          <h3>
+            A greener future starts locally.
+          </h3>
+
+          <p>
+            Project Prakriti focuses on environmental conservation
+            and sustainable living through tree plantation,
+            clean-up activities, awareness campaigns and
+            community participation. The foundation reports
+            more than 20,000 saplings planted.
+          </p>
+
+          <div class="project-facts">
+
+            <div class="project-fact">
+              <strong>Focus</strong><br>
+              Environment
+            </div>
+
+            <div class="project-fact">
+              <strong>Reported</strong><br>
+              20,000+ saplings
+            </div>
+
+          </div>
+
+          <a
+            href="#donate"
+            class="project-link"
+          >
+            Support Project Prakriti →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           VIKAS
+      ================================================== -->
+
+      <article class="project reverse">
+
+        <div class="project-image">
+
+          <img
+            src="assets/poster-hope.jpg"
+            alt="Project Vikas initiative"
+          >
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-number">
+            06 / VIKAS
+          </div>
+
+          <h3>
+            Skills for work. Experience for tomorrow.
+          </h3>
+
+          <p>
+            Project Vikas focuses on employability and skill
+            development through internships and practical
+            experience across areas such as data operations,
+            finance, research, content writing, digital
+            marketing and social work.
+          </p>
+
+          <div class="project-facts">
+
+            <div class="project-fact">
+              <strong>Focus</strong><br>
+              Employability
+            </div>
+
+            <div class="project-fact">
+              <strong>Reported</strong><br>
+              30,000+ interns trained
+            </div>
+
+          </div>
+
+          <a
+            href="#spread"
+            class="project-link"
+          >
+            Get involved →
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     IMPACT
+======================================================== -->
+
+<section class="impact">
+
+  <div class="wrap impact-grid">
+
+
+    <div>
+
+      <div class="eyebrow" style="color:#E5A33F;">
+        The bigger picture
+      </div>
+
+      <h2>
+        Change is rarely one big gesture.
+      </h2>
+
+      <p class="impact-intro">
+        It is usually a collection of smaller efforts:
+        a meal, a lesson, a rescue, a skill, a tree,
+        or someone deciding to volunteer their time.
+      </p>
+
+    </div>
+
+
+    <div class="impact-items">
+
+      <div class="impact-item">
+        <strong>50K+</strong>
+        <span>Beneficiaries</span>
+      </div>
+
+      <div class="impact-item">
+        <strong>28</strong>
+        <span>States reached</span>
+      </div>
+
+      <div class="impact-item">
+        <strong>20K+</strong>
+        <span>Saplings planted</span>
+      </div>
+
+      <div class="impact-item">
+        <strong>30K+</strong>
+        <span>Interns trained</span>
+      </div>
+
+      <div class="impact-item">
+        <strong>50+</strong>
+        <span>Animals fed daily</span>
+      </div>
+
+      <div class="impact-item">
+        <strong>200</strong>
+        <span>Volunteers</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     ABOUT / CREDENTIALS
+======================================================== -->
+
+<section class="about">
+
+  <div class="wrap about-grid">
+
+
+    <div>
+
+      <div class="eyebrow">
+        Why InAmigos
+      </div>
+
+      <h2 class="about-title">
+        A foundation built to keep people involved.
+      </h2>
+
+    </div>
+
+
+    <div>
+
+      <div class="about-copy">
+
+        <p>
+          InAmigos Foundation was founded in 2020 by
+          Govind Shukla and operates from Chhattisgarh,
+          with initiatives reaching communities across India.
+        </p>
+
+        <p>
+          Its work combines direct community programs with
+          volunteering, awareness, skill development and
+          partnerships.
+        </p>
+
+        <p>
+          The organization states that it is registered under
+          Section 8 and holds 80G and 12A certifications,
+          alongside CSR-1 and NITI Aayog registration.
+        </p>
+
+      </div>
+
+
+      <div class="credentials">
+
+        <div class="credential">
+          <strong>Section 8</strong>
+          Central Government registered
+        </div>
+
+        <div class="credential">
+          <strong>80G &amp; 12A</strong>
+          Donor certifications
+        </div>
+
+        <div class="credential">
+          <strong>CSR-1</strong>
+          Corporate CSR eligibility
+        </div>
+
+        <div class="credential">
+          <strong>NITI Aayog</strong>
+          Registered organization
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     EVENTS
+======================================================== -->
+
+<section class="events" id="events">
+
+  <div class="wrap">
+
+
+    <div class="section-heading">
+
+      <div>
+
+        <div class="eyebrow">
+          Community
+        </div>
+
+        <h2>
+          Beyond donations.
+        </h2>
+
+      </div>
+
+      <p>
+        Awareness campaigns, community events and environmental
+        initiatives are another part of the foundation's work.
+        Explore each event and watch related coverage from
+        InAmigos Foundation.
+      </p>
+
+    </div>
+
+
+    <div class="event-list">
+
+
+      <!-- =================================================
+           WORLD WATER DAY
+      ================================================== -->
+
+      <article class="event">
+
+        <div class="event-date">
+          22 Mar 2025
+        </div>
+
+
+        <div>
+
+          <div class="event-category">
+            Community
+          </div>
+
+          <h3>
+            World Water Day 2025
+          </h3>
+
+          <p>
+            Awareness sessions on water conservation,
+            sustainability and responsible water usage,
+            with discussions around practical action.
+          </p>
+
+        </div>
+
+
+        <div class="event-actions">
+
+          <a
+            class="event-arrow"
+            href="https://youtu.be/AxfEVXNm_-4"
+            target="_blank"
+            rel="noopener"
+            aria-label="Watch World Water Day 2025 videos"
+            title="Watch on YouTube"
+          >
+            ▶
+          </a>
+
+          <a
+            class="event-link"
+            href="https://inamigosfoundation.org.in/event/world-water-day-2025"
+            target="_blank"
+            rel="noopener"
+          >
+            Event ↗
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           INTERNATIONAL DAY OF HAPPINESS
+      ================================================== -->
+
+      <article class="event">
+
+        <div class="event-date">
+          20 Mar 2025
+        </div>
+
+
+        <div>
+
+          <div class="event-category">
+            Community
+          </div>
+
+          <h3>
+            International Day of Happiness 2025
+          </h3>
+
+          <p>
+            Interactive sessions, wellbeing activities,
+            discussions around mental health and self-care,
+            and community engagement focused on positivity.
+          </p>
+
+        </div>
+
+
+        <div class="event-actions">
+
+          <a
+            class="event-arrow"
+            href="https://youtu.be/XMzPzE4gXyI"
+            target="_blank"
+            rel="noopener"
+            aria-label="Watch International Day of Happiness 2025 videos"
+            title="Watch on YouTube"
+          >
+            ▶
+          </a>
+
+          <a
+            class="event-link"
+            href="https://inamigosfoundation.org.in/event/international-day-of-happiness-2025"
+            target="_blank"
+            rel="noopener"
+          >
+            Event ↗
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           WOMEN AND GIRLS IN SCIENCE
+      ================================================== -->
+
+      <article class="event">
+
+        <div class="event-date">
+          11 Feb 2025
+        </div>
+
+
+        <div>
+
+          <div class="event-category">
+            Education
+          </div>
+
+          <h3>
+            International Day of Women and Girls in Science
+          </h3>
+
+          <p>
+            A day focused on encouraging women and girls
+            to participate in science, technology and
+            other STEM fields.
+          </p>
+
+        </div>
+
+
+        <div class="event-actions">
+
+          <a
+            class="event-arrow"
+            href="https://youtu.be/mxkcBJci3vE"
+            target="_blank"
+            rel="noopener"
+            aria-label="Watch Women and Girls in Science 2025 videos"
+            title="Watch on YouTube"
+          >
+            ▶
+          </a>
+
+          <a
+            class="event-link"
+            href="https://inamigosfoundation.org.in/events/7/Education"
+            target="_blank"
+            rel="noopener"
+          >
+            Event ↗
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     SPREAD THE WORD
+======================================================== -->
+
+<section class="spread" id="spread">
+
+  <div class="wrap spread-grid">
+
+
+    <div class="spread-image">
+
+      <img
+        src="assets/recruit.jpg"
+        alt="Join the InAmigos Foundation fundraising initiative"
+      >
+
+    </div>
+
+
+    <div class="spread-copy">
+
+      <div class="eyebrow">
+        Get involved
+      </div>
+
+      <h2>
+        You don't have to do everything.
+        Just do something.
+      </h2>
+
+      <p>
+        Donate, volunteer, share a campaign or help someone
+        discover the work being done through InAmigos Foundation.
+        Small actions become useful when more people take part.
+      </p>
+
+
+      <div class="share-row">
+
+
+        <a
+          class="share-button"
+          target="_blank"
+          rel="noopener"
+          href="https://wa.me/?text=Support%20InAmigos%20Foundation%20%E2%80%94%20every%20contribution%20creates%20change.%20Donate%20via%20UPI%3A%20inamigosfoundation%40icici%20or%20learn%20more%3A%20https%3A//inamigosfoundation.org.in"
+        >
+
+          WhatsApp
+
+        </a>
+
+
+        <a
+          class="share-button"
+          target="_blank"
+          rel="noopener"
+          href="https://twitter.com/intent/tweet?text=Support%20InAmigos%20Foundation%20%E2%80%94%20every%20contribution%20creates%20change.%20Donate%20via%20UPI%3A%20inamigosfoundation%40icici%20or%20learn%20more%3A%20https%3A//inamigosfoundation.org.in"
+        >
+
+          X / Twitter
+
+        </a>
+
+
+        <a
+          class="share-button"
+          href="mailto:?subject=Support%20InAmigos%20Foundation&body=Support%20InAmigos%20Foundation%20%E2%80%94%20every%20contribution%20creates%20change.%20Donate%20via%20UPI%3A%20inamigosfoundation%40icici%20or%20learn%20more%3A%20https%3A//inamigosfoundation.org.in"
+        >
+
+          Email
+
+        </a>
+
+
+        <a
+          class="share-button"
+          href="#"
+          id="copyLinkBtn"
+        >
+
+          Copy message
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     DONATION
+======================================================== -->
+
+<section class="donate" id="donate">
+
+  <div class="wrap donate-grid">
+
+
+    <div class="qr">
+
+      <img
+        src="assets/qr.png"
+        alt="UPI QR code for InAmigos Foundation"
+      >
+
+    </div>
+
+
+    <div class="donate-copy">
+
+      <div class="eyebrow" style="color:#ffd0dc;">
+        Support the work
+      </div>
+
+      <h2>
+        One contribution.
+        Six causes.
+      </h2>
+
+      <p>
+        Use the QR code or UPI ID below to support the work of
+        InAmigos Foundation across its different initiatives.
+      </p>
+
+
+      <div class="upi">
+
+        <code id="upiId">
+          inamigosfoundation@icici
+        </code>
+
+        <button
+          class="copy-button"
+          id="copyUpiBtn"
+          type="button"
+        >
+          Copy
+        </button>
+
+      </div>
+
+
+      <div class="donate-buttons">
+
+        <a
+          class="donate-button"
+          href="upi://pay?pa=inamigosfoundation@icici&pn=InAmigos%20Foundation&cu=INR"
+        >
+          Pay via UPI
+        </a>
+
+        <a
+          class="donate-button alt"
+          href="#projects"
+        >
+          See the projects
+        </a>
+
+      </div>
+
+
+      <p class="donate-note">
+        Works with PhonePe, Google Pay, Paytm and other UPI apps.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer>
+
+  <div class="wrap footer-grid">
+
+
+    <div class="footer-col">
+
+      <div class="footer-title">
+        InAmigos Foundation
+      </div>
+
+      <p>
+        Uniting Minds For Change.<br>
+        Together, we can. Together, we will.
+      </p>
+
+      <a
+        href="https://inamigosfoundation.org.in"
+        target="_blank"
+        rel="noopener"
+      >
+        inamigosfoundation.org.in
+      </a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <div class="footer-title">
+        Contact
+      </div>
+
+      <p>
+        Ward No. 5, Gram Post,<br>
+        Sipat Ujwal Nagar,<br>
+        Bilaspur, Chhattisgarh<br>
+        PIN 495555
+      </p>
+
+      <a href="mailto:inamigosfoundation@gmail.com">
+        inamigosfoundation@gmail.com
+      </a>
+
+      <a href="tel:+916267309902">
+        +91 626 730 9902
+      </a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <div class="footer-title">
+        Explore
+      </div>
+
+      <a href="#about">About Us</a>
+      <a href="#projects">Our Projects</a>
+      <a href="#events">Events</a>
+      <a href="#spread">Get Involved</a>
+      <a href="#donate">Donate</a>
+
+    </div>
+
+  </div>
+
+
+  <div class="wrap footer-bottom">
+
+    © InAmigos Foundation. All Rights Reserved.
+
+  </div>
+
+</footer>
+
+
+<!-- TOAST -->
+
+<div
+  class="toast"
+  id="toast"
+></div>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================== -->
+
+<script>
+
+(function(){
+
+  var toast = document.getElementById("toast");
+  var timer;
+
+
+  function showToast(message){
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    clearTimeout(timer);
+
+    timer = setTimeout(function(){
+
+      toast.classList.remove("show");
+
+    },1800);
+
+  }
+
+
+  function copyText(text,message){
+
+    if(
+      navigator.clipboard &&
+      navigator.clipboard.writeText
+    ){
+
+      navigator.clipboard.writeText(text)
+        .then(function(){
+
+          showToast(message);
+
+        })
+        .catch(function(){
+
+          showToast("Could not copy");
+
+        });
+
+      return;
+    }
+
+
+    var textarea =
+      document.createElement("textarea");
+
+    textarea.value = text;
+
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+
+    document.body.appendChild(textarea);
+
+    textarea.select();
+
+    try{
+
+      document.execCommand("copy");
+
+      showToast(message);
+
+    }catch(error){
+
+      showToast("Could not copy");
+
+    }
+
+    document.body.removeChild(textarea);
+
+  }
+
+
+  /* =========================
+     COPY UPI
+  ========================= */
+
+  var upi =
+    document
+      .getElementById("upiId")
+      .textContent
+      .trim();
+
+
+  var copyUpi =
+    document.getElementById("copyUpiBtn");
+
+
+  if(copyUpi){
+
+    copyUpi.addEventListener(
+      "click",
+      function(){
+
+        copyText(
+          upi,
+          "UPI ID copied"
+        );
+
+      }
+    );
+
+  }
+
+
+  /* =========================
+     COPY SHARE MESSAGE
+  ========================= */
+
+  var copyMessage =
+    document.getElementById("copyLinkBtn");
+
+
+  if(copyMessage){
+
+    copyMessage.addEventListener(
+      "click",
+      function(event){
+
+        event.preventDefault();
+
+        var message =
+          "Support InAmigos Foundation — every contribution creates change. " +
+          "Donate via UPI: " +
+          upi +
+          " or learn more: https://inamigosfoundation.org.in";
+
+
+        copyText(
+          message,
+          "Message copied"
+        );
+
+      }
+    );
+
+  }
+
+
+  /* =========================
+     HERO VIDEO — 5 SECOND LOOP
+  ========================= */
+
+  var video =
+    document.getElementById("bgVideo");
+
+  if(video){
+
+    video.addEventListener("timeupdate", function(){
+
+      if(video.currentTime >= 7){
+
+        video.currentTime = 0;
+        video.play();
+
+      }
+
+    });
+
+  }
+
+
+  /* =========================
+     REDUCED MOTION
+  ========================= */
+
+  if(
+    video &&
+    window.matchMedia &&
+    window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches
+  ){
+
+    video.pause();
+
+    video.removeAttribute("autoplay");
+
+  }
+
+})();
+
+</script>
+
+</body>
+</html>
